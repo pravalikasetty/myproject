@@ -1,0 +1,25 @@
+{% extends "about.html" %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6">
+        <img src="{% static 'resume4.jpg'%}" class="img d-block w-50 p-3 mt-1" alt="">
+        </div>
+    <div class="col-sm-6" style="color:black">
+        <div>
+            <h1 style="font-family: 'Lucida Grande'; color: red; margin-top: 10px; text-align: center;">Login</h1>
+            <form action="/logincheck">
+                {{msg}}
+                <div class="mb-3">
+                    <input value="{{email}}" type="text" name="email" id="emailid" class="form-control border-3 border-black mt-3" type="text" placeholder="Email:"required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="password" id="password" class="form-control border-3 border-black mt-3" type="text" placeholder="Password:"required>
+                </div>
+                <button class="btn btn-info" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "adminlayout.html" %}
+{% load static %}
+{% block content %}
+<body>
+    <h1 style="background-color: white; color: black; text-align: center;">Build Awesome Resume within 10 minutes.</h1>
+    <h6 style="text-align: center; font-family: monospace;" ><b>Enter the fields below to generate a resume file</b></h6>
+    <h5 style="text-align: center; margin-top: 10px; font-family: cursive;"><b>Personal Details</b></h5>
+    <div class="container" >
+    
+        <div class="row">
+            <div class="col-sm-6">
+                <div>
+                    <form action="/doresume">
+                        <div class="mb-2">
+                            
+                            <input type="text" name="fullname" id="fullname" class="form-control border-3 border-black mt-2" type="text" placeholder="FullName:">
+                        </div>
+                        <div class="mb-2">
+                            
+                            <input type="email" name="Email" id="email" class="form-control border-3 border-black mt-2" type="text" placeholder="Email:">
+                        </div>
+                        <div class="mb-2">
+                            
+                            <input type="tel" name="phone" id="phone" class="form-control border-3 border-black mt-2" type="text" placeholder="Phone:">
+                        </div>
+                        <div>
+                            <input type="date" id="dob" name="dob" class="form-control border-3 border-black " placeholder="Date of Birth:"required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" name="linkedin" id="linkedin" class="form-control border-3 border-black mt-2" type="text" placeholder="LinkedIn"required>
+                        </div>
+
+                        <div>
+                            <textarea name="address" id="address" class="form-select border-3 border-black" placeholder="Address:"required></textarea>
+                        </div >
+                        
+                        <div>
+                            <textarea name="career objective" id="careerobjective" class="form-select border-3 border-black mt-2 p-2" placeholder="CareerObjective"required></textarea>
+                        </div >
+                        <div>
+                            <textarea name="education" id="education" class="form-select border-3 border-black mt-2 p-3" placeholder="Education:"required></textarea>
+                        </div>
+                        <div>
+                            <textarea name="skills" id="skills" class="form-select border-3 border-black mt-2 p-3" placeholder="Skills:"required></textarea>
+                        </div>
+                        <div>
+                            <textarea name="projects" id="projects" class="form-select border-3 border-black mt-2 p-3" placeholder="Projects:"required></textarea>
+                        </div>
+                        <div>
+                            <textarea name="certifications" id="certifications" class="form-select border-3 border-black mt-2 p-3" placeholder="Certifications"required></textarea>
+                        </div >
+                    </div>
+                        <div class="mb-2">
+                            <button class="btn btn-primary text-white mt-2" ><a href="one.html"></a>Submit</button>
+                            <button class="btn btn-danger text-white mt-2" type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</body>
+{% endblock %}
